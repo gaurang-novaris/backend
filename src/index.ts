@@ -21,7 +21,7 @@ mongoose.connect("mongodb+srv://user:IJBiWYCS2wh6kwxE@cluster0.fyfkv0j.mongodb.n
 
 // Middleware
 app.use(express.json());
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+app.use(cors({ origin: https://demo.novaris.ai", credentials: true }));
 
 
 app.use(
@@ -78,9 +78,9 @@ passport.use(new GoogleStrategy({
 app.get('/auth/google', passport.authenticate('google', { scope: ['profile'] }));
 
 app.get('/auth/google/callback',
-  passport.authenticate('google', { failureRedirect: 'http://localhost:3000', session: true }),
+  passport.authenticate('google', { failureRedirect: 'https://demo.novaris.ai', session: true }),
   function (req, res) {
-    res.redirect('http://localhost:3000');
+    res.redirect('https://demo.novaris.ai');
   });
 
 app.get("/", (req, res) => {
