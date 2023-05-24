@@ -21,7 +21,7 @@ mongoose.connect("mongodb+srv://user:IJBiWYCS2wh6kwxE@cluster0.fyfkv0j.mongodb.n
 
 // Middleware
 app.use(express.json());
-app.use(cors({ origin: https://demo.novaris.ai", credentials: true }));
+app.use(cors({ origin: "https://demo.novaris.ai", credentials: true }));
 
 
 app.use(
